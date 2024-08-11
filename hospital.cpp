@@ -149,7 +149,6 @@ public:
             patient.totalCost = totalCost;
             patient.doctor_id = doctor_id;
 
-            // Assuming we add patients to a map based on the doctor_id
             Patient_database[doctor_id].push_back(patient);
         }
 
@@ -165,17 +164,6 @@ public:
         }
 
         vector<Doctor> &doctors = Doctor_database[specialization];
-        // int s = 1;
-        // cout << "\tAvailable Doctors for " << specialization << " specialization:" << endl;
-        // for (const auto &doctor : doctors)
-        // {
-        //     cout << "\t\t" << s++<<"."<<endl;
-        //     cout << "\t\tDoctor ID: " << doctor.id << endl;
-        //     cout << "\t\tName: " << doctor.name << endl;
-        //     cout << "\t\tFees per Appointment: " << doctor.feesPerAppointment << endl;
-        //     cout << "\t\t-------------------------" << endl;
-        // }
-
         return doctors;
     }
 };
