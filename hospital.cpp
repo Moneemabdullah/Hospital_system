@@ -8,8 +8,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-using namespace std;
-
 class Patient
 {
 public:
@@ -164,6 +162,7 @@ public:
         }
 
         vector<Doctor> &doctors = Doctor_database[specialization];
+
         return doctors;
     }
 };
@@ -345,8 +344,9 @@ public:
         Patient_database[doctor_id].push_back(newPatient);
 
         cout << "\t=======================================================" << endl;
-        cout << "\t\tPatient registered successfully!" << endl;
-        cout << "\tPatient ID: " << id << endl;
+        cout << "\tPatient registered successfully!" << endl;
+        cout << "\t\tPatient ID: " << id << endl;
+        cout << "\t\tPatient Name: " << name << endl;
         cout << "\t=======================================================" << endl;
     }
 };
@@ -373,7 +373,7 @@ public:
 
         if (!found)
         {
-            cout << "\t\tNo patients found for Doctor ID: " << doc_id << endl;
+            cout << "\tNo patients found for Doctor ID: " << doc_id << endl;
         }
         cout << "\t=======================================================" << endl;
     }
